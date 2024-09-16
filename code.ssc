@@ -1,0 +1,36 @@
+nodes
+    
+    P = foundation.hydraulic.hydraulic; % P:left
+    T = foundation.hydraulic.hydraulic; % T:left
+    A = foundation.hydraulic.hydraulic; % A:left
+    B = foundation.hydraulic.hydraulic; % B:left
+    
+        
+end
+
+inputs
+    Uin = {0, 'V'}; % Uin:right
+end
+
+outputs
+    U = {0, 'V'}; % U:right
+end
+
+parameters
+    
+    Cv = {7e-8, 'm^3/(s*V*Pa^0.5)'}; % semi-empirical flow rate
+    tau = {1e-4, 's'}; % time constant
+end
+
+variables
+    
+     p_PA = {0, 'Pa'}; % Pp-PA
+     p_AT = {0, 'Pa'}; % PA-PT
+     p_PB = {0, 'Pa'}; % Pp-PB
+     p_BT = {0, 'Pa'}; % PB-PT
+     Q_PA = {0, 'm^3/s'}; % flow from P to A
+     Q_AT = {0, 'm^3/s'}; % flow from A to T
+     Q_PB = {0, 'm^3/s'}; % flow from P to B
+     Q_BT = {0, 'm^3/s'}; % flow from B to T
+end
+
